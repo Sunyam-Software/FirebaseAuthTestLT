@@ -128,7 +128,7 @@ class MyCustomFormState extends State<MyCustomForm> {
                   } else {
                     verifyUserPhoneNumber();
                   }
-                  FocusManager.instance.primaryFocus?.unfocus();
+                  // fo
                 }
               },
               child: const Text('Submit'),
