@@ -1,4 +1,4 @@
-package com.new.otp_test
+package com.otp_test
 
 import io.flutter.embedding.android.FlutterActivity
 
