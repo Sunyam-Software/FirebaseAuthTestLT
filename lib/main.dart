@@ -43,8 +43,9 @@ class MyCustomFormState extends State<MyCustomForm> {
   FirebaseAuth auth = FirebaseAuth.instance;
   String phoneNumber = '';
   String receivedID = '';
-  bool visibility = false;
+  bool flag = false;
 // =================================== logical code ====================================
+  // just a SnackBar
   void alert({required String massage}) {
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(content: Text(massage)),
@@ -65,7 +66,7 @@ class MyCustomFormState extends State<MyCustomForm> {
       },
       codeSent: (String verificationId, int? resendToken) {
         receivedID = verificationId;
-        visibility = true;
+        flag = true;
         setState(() {});
       },
       codeAutoRetrievalTimeout: (String verificationId) {
@@ -122,7 +123,7 @@ class MyCustomFormState extends State<MyCustomForm> {
                 debugPrint(phoneNumber);
                 // Validate returns true if the form is valid, or false otherwise.
                 if (_formKey.currentState!.validate()) {
-                  if (visibility) {
+                  if (flag) {
                     verifyOTPCode(phoneNumber);
                   } else {
                     verifyUserPhoneNumber();
