@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.auth_test">
+    package="com.new.otp_test">
    <application
         android:label="auth_test"
         android:name="${applicationName}"
