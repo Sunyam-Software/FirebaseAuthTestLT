@@ -63,6 +63,7 @@ class MyCustomFormState extends State<MyCustomForm> {
       },
       verificationFailed: (FirebaseAuthException e) {
         debugPrint("Error :>> ${e.message}");
+        alert(massage: "Error :>> ${e.message}");
       },
       codeSent: (String verificationId, int? resendToken) {
         receivedID = verificationId;
@@ -71,6 +72,7 @@ class MyCustomFormState extends State<MyCustomForm> {
       },
       codeAutoRetrievalTimeout: (String verificationId) {
         debugPrint('TimeOut');
+        alert(massage: 'TimeOut');
       },
     );
   }
